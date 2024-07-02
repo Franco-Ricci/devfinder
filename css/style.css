@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --ligth-blue: hsl(212, 100%, 50%);
+    --main-bg: hsl(227, 100%, 98%);
+    --card-bg: hsl(0, 0%, 100%);
+    --text: hsl(217, 35%, 45%);
+    --text-secondary: hsl(217, 20%, 51%);
+    --heading: hsl(217, 21%, 21%);
+    --text-medias: hsl(216, 28%, 72%);
+}
+body{
+    height: 100%;
+    font-family: "space-mono", monospace;
+    background-color: var(--main-bg);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.dark{
+
+    /* color:var(--main-bg) */
+    --main-bg:hsl(220, 40%, 13%);
+    --card-bg:rgb(30, 43, 72);
+    --text:hsl(216, 28%, 72%);
+    --heading: hsl(0, 0%, 100%);
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__textlink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color:var(--text);
+    cursor: pointer;
+}
+
+.nav:hover{
+    color:var(--text-secondary);
+}
+.toggle-title{
+    color: var(--heading);
+    
+}
+.fa-search:before{
+    color:hsl(212, 100%, 50%)
+}
+.search__form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;    
+    margin-top: 30px;
+    color:var(--text)
+}
+
+.search__icon{
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    margin-left: 14px;
+}
+
+.search__input{
+    width: 100%;
+    position:relative;
+    border-radius: 10px;
+    padding: 19px 113px 19px 40px;
+    border: none;
+    box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+    color:var(--text);
+    background-color:var(--card-bg)
+}
+
+.search__input:focus{
+    outline: none;
+  
+}
+.search__btn{
+    background-color: var(--ligth-blue);
+    color:white;
+    position:absolute;
+    right: 10px;
+    padding:12px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.search__null{
+    opacity: 0;
+    position: absolute;
+    right: 140px;
+    color: red;
+    background-color: var(--card-bg)
+}
+
+.search__null-show{
+    opacity:1;
+}
+.result__section{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 36px 50px;
+    margin-top: 30px;
+    box-shadow: 0 16px 30px -10px rgb(70 96 187 / 20%);
+    background-color:var(--card-bg)
+}
+.result{
+    display:flex;
+    gap: 100px;
+  
+}
+
+.avatar__img{
+    height: 100px;
+    width: 100px;
+    border-radius: 40px;
+    margin-bottom: 30px;
+}
+
+.info{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.info__title{
+    color:var(--heading);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.info__username{
+    color: var(--ligth-blue);
+}
+
+.info__text{
+    color: var(--text);
+}
+.repo__content{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--main-bg);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.title__content{
+    text-align: center;
+    margin-bottom: 10px;
+    color:var(--text)
+}
+.title__desc{
+    font-weight: 700;
+    text-align: center;
+    color: var(--heading);
+}
+
+.twitter__link, .blog__link{
+    text-decoration: none;
+    color: var(--text);
+}
+.bio{
+    width: 300px;
+    margin-bottom: 30px;
+    color:var(--text)
+}
+
+.medias{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    color: var(--text);
+    justify-content:space-around;
+}
+
+.media__content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.media__location, .media__twitter, .media__link, .media__brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px
+}
+
+@media screen and (max-width: 546px) {
+    .result{
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+
+.header__title{
+    font-size: 28px;
+}
+.avatar__img{
+    width: 80px;
+    height: 80px;
+}
+.info__title{
+    font-size: 20px;
+}
+.info__username, .info__text, .bio__content{
+    font-size: 14px;
+}
+.result{
+    gap: 30px;
+    }
+.result__section{
+    padding:35px 20px
+}
+.repo__content{
+    gap: 10px;
+    font-size: 14px;
+}
+.bio{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.medias{
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+ }
+
+ .search__null{
+     right: 100px;
+     font-size: 15px;
+ }
+}
